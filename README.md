@@ -94,10 +94,31 @@ Also, because there is no friction that comes with intermediate branches, this w
 
 # Continuous Code Review
 
+## Pull Requests in Trunk Based Development
+
+In trunk based development it is different. Since we want to merge our commits into the master branch as quickly as possible, we cannot wait until the complete feature is finished. Unlike in the original trunk based development approach we still use feature branches but we have much less divergence from the master branch than in Git Flow. We create a pull request as soon as the first commit is pushed into the feature branch. Of course that requires that no commit breaks anything or causes tests to fail. Remember that unfinished features can always be disabled with feature toggles.
+
+Now, with part of the new feature committed and the pull request created, another developer from the team can review it. In most cases that doesn’t happen immediately because the developers don’t want to interrupt their work every time a team member pushes a commit. Instead, the code reviews are done when another developer is open for it. Meanwhile, the pull request might grow by a few commits.
+
+The code is not always reviewed immediately after the commit but in most cases it reaches the master branch much quicker than in Git Flow.
+
 # Feature Toggles
+
+# Conclusion
+
+> TBD is awesome, but it is not a silver bullet. Trying to implement it before having a reliable test suite and continuous integration in place (at least) will lead to serious quality issues in production.
+
+> While it is true that TBD expects a certain discipline from the developer, with the right practices, it can dramatically make your software development and deployment process much more reliable and lightweight.
+
+> One of the key technical practices that underpin this method of development, is working in "Small, incremental changes over big bang changes". Once your team embraces this practice, and the mindset behind it, you will find that your code reviews are rarely delayed more than a couple of hours. Because pull requests are very small, code reviews are very easy, so they happen more often.
+
+> You can also work with your team to prioritise continuous flow throughput. That means, if a pull request is up for review, it is effectively a blocker for someone else's progress; so everyone prioritises dropping what they are doing to do the code review as fast as they can to unblock any work clogging up.
+
+> Continuous deployment is a similar example: If you release a small amount of code to production, you have less to test, less to break and less to go wrong. And if something does go wrong, you are way more likely to understand what caused it because the changes to that environment were smaller and happened closer to the time of release, so they're easier to remember and resolve.
 
 # References
 
+* https://blogs.technet.microsoft.com/devops/2016/06/21/a-git-workflow-for-continuous-delivery/
 * https://www.thoughtworks.com/insights/blog/enabling-trunk-based-development-deployment-pipelines
 * https://trunkbaseddevelopment.com
 * https://medium.com/@aboodman/in-march-2011-i-drafted-an-article-explaining-how-the-team-responsible-for-google-chrome-ships-c479ba623a1b
