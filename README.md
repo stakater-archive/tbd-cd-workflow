@@ -49,6 +49,28 @@ The practice of checking in often means that merge conflicts if any are small an
 
 TBD also implies deploying code from the mainline to production – which means that your mainline must always be in a state that it can be released to production.
 
+## No branches
+
+On many projects, it’s common to branch the source code to work on major new features. The idea is that temporary destabilization from the new code won’t affect other developers or users. Once the feature is complete, its branch is merged back into trunk, and there is usually a period of instability while integration issues are ironed out.
+This wouldn’t work in Chrome because we release every day. We can’t tolerate huge chunks of new code suddenly showing up in trunk because it would have a high chance of taking down the canary or dev channels for an extended period. Also, the trunk of Chrome moves so fast that it isn’t practical for developers to be isolated on a branch for very long. By the time they merged, trunk would look so different that integration would be difficult and error-prone.
+
+We do create maintenance branches before each of our beta releases, but these are really short-lived. Just six weeks at most, until the next beta release. And we never develop directly on these branches. Any late fixes that need to go into a release are first made on trunk, and then cherry-picked into the branch.
+
+One happy side-effect of this is that there’s no B-team of developers stuck working on a maintenance branch. All developers are always working with the latest and greatest source.
+
+
+## Runtime switches
+
+We don’t create branches, but we still need some way to hide incomplete features from users. One natural way to do this would be with compile-time checks. The problem with those is they aren’t much different from just branching the code. You still effectively have two separate codebases that must eventually be merged. And since the new code isn’t compiled or tested by default, it’s very easy for developers to accidentally break it.
+
+The Chromium project uses runtime checks instead. Every feature under development is compiled and tested under all configurations from the very beginning. We have command-line flags that we test for very early in startup. Everywhere else, the codebase is mostly ignorant of which features are enabled. This strategy means that new feature work is integrated as much as possible from the beginning. It’s at least compiled, and any changes to core code that need to be done are tested and exposed to users as normal. And we can easily write automated tests that exercise disabled features by temporarily overriding the command line.
+
+When a feature gets close to completion we introduce an option in chrome://flags so that advanced users can start trying it out and giving us feedback. Finally, when we think the feature is ready to ship, we remove the command-line flag and enable it by default. By this time the code has been extensively tested with automation and used by many people. So the impact from turning it on is minimized.
+
+## Gigantic amounts of automated testing
+
+In order to release every day, we need to have confidence that our codebase is always in a good state. This requires automated tests. Lots of automated tests. 
+
 ## Isn’t it too risky to develop on the mainline?
 
 This sounds like a scary idea and many people initially balk at the idea of checking in directly to the mainline in favor of using branches which in comparison feel safe and cozy.
