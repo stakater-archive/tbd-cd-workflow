@@ -116,6 +116,8 @@ The code is not always reviewed immediately after the commit but in most cases i
 
 > Continuous deployment is a similar example: If you release a small amount of code to production, you have less to test, less to break and less to go wrong. And if something does go wrong, you are way more likely to understand what caused it because the changes to that environment were smaller and happened closer to the time of release, so they're easier to remember and resolve.
 
+> no branches, runtime switches, tons of automated testing, relentless refactoring, and staying very close to HEAD of our dependencies.
+
 # References
 
 * https://blogs.technet.microsoft.com/devops/2016/06/21/a-git-workflow-for-continuous-delivery/
