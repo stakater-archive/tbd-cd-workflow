@@ -189,7 +189,13 @@ Your first choice should be to break the feature down so you can safely introduc
 
 1. Raise a PR as soon as you have first commit in your feature branch - 
 
-2. 
+2. No long living feature branches
+
+3. Small, incremental changes over big bang changes
+
+4. Hide unfinished functionality with feature toggles ( runtime switches )
+
+5. Comprehensive automated tests to give confidence
 
 # Conclusion
 ---
