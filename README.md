@@ -157,8 +157,8 @@ The code is not always reviewed immediately after the commit but in most cases i
 
 # References
 
-* https://blogs.technet.microsoft.com/devops/2016/06/21/a-git-workflow-for-continuous-delivery/
-* https://www.thoughtworks.com/insights/blog/enabling-trunk-based-development-deployment-pipelines
-* https://trunkbaseddevelopment.com
-* https://medium.com/@aboodman/in-march-2011-i-drafted-an-article-explaining-how-the-team-responsible-for-google-chrome-ships-c479ba623a1b
+* [A git workflow for continuous delivery](https://blogs.technet.microsoft.com/devops/2016/06/21/a-git-workflow-for-continuous-delivery/)
+* [Enabling trunk based development deployment pipelines](https://www.thoughtworks.com/insights/blog/enabling-trunk-based-development-deployment-pipelines)
+* [Trunk Based Development](https://trunkbaseddevelopment.com)
+* [How is Google Chrome shipped?](https://medium.com/@aboodman/in-march-2011-i-drafted-an-article-explaining-how-the-team-responsible-for-google-chrome-ships-c479ba623a1b)
 * https://martinfowler.com/articles/feature-toggles.html
