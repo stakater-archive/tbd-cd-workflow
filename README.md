@@ -216,6 +216,14 @@ Your first choice should be to break the feature down so you can safely introduc
 
 > no branches, runtime switches, tons of automated testing, relentless refactoring, and staying very close to HEAD of our dependencies.
 
+# Questions
+---
+
+**Q 1:** So, question: how do you manage to carry out refactoring and particularly the “major modularization” without using long-lived branches, and while everything is changing so fast?
+
+**A 1:** The answer is that refactorings must be broken up into changes which incrementally move toward the desired end-state without breaking anything in the meantime. It’s a skill, but it can be done!
+
+
 # References
 
 * [A git workflow for continuous delivery](https://blogs.technet.microsoft.com/devops/2016/06/21/a-git-workflow-for-continuous-delivery/)
