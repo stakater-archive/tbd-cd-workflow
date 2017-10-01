@@ -8,8 +8,8 @@ trunk based development (tbd) continuous delivery (cd) workflow
 
 > Continuous Delivery (CD) is a software strategy that enables organizations to deliver new features to users as fast and efficiently as possible. The core idea of CD is to create a repeatable, reliable and incrementally improving process for taking software from concept to customer. The goal of Continuous Delivery is to enable a constant flow of changes into production via an automated software production line. The Continuous Delivery pipeline is what makes it all happen.
 
-# Common anti-patterns with branch based workflows?
----
+Common anti-patterns with branch based workflows?
+===
 
 Before we talk about TBD, let us look at some of the anti-patterns with branch-based workflows.
 
