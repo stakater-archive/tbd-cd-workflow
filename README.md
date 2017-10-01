@@ -79,6 +79,12 @@ We must run new changes to our code against our test suite on every configuratio
 
 To help developers avoid breaking the tree, we can have [try bots](http://www.chromium.org/developers/testing/try-server-usage), which are a way to test a change under all tests and configurations before landing it. The results can be emailed to the developer. We can also have a [commit queue](http://www.chromium.org/developers/testing/commit-queue), which is a way to try a change and have it landed automatically if the try succeeds. I like to use this after a long night of hacking. I press the button, go to bed, and wake up — hopefully to my change having landed.
 
+## Relentless refactoring
+
+Given a pretty comprehensive test coverage, we can afford to be aggressive with refactoring.
+
+At high scale and pace, it’s critical to keep the codebase clean and understandable. We even view it as more important than preventing regressions. Engineers should be empowered to make improvements anywhere in the system. If a refactor breaks something that wasn’t exposed by failing tests, our outlook it that it isn’t the fault of the engineer who did the refactor, but the one whose feature had insufficient test coverage.
+
 ## Isn’t it too risky to develop on the mainline?
 
 This sounds like a scary idea and many people initially balk at the idea of checking in directly to the mainline in favor of using branches which in comparison feel safe and cozy.
