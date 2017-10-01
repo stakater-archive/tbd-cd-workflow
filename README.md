@@ -161,4 +161,4 @@ The code is not always reviewed immediately after the commit but in most cases i
 * [Enabling trunk based development deployment pipelines](https://www.thoughtworks.com/insights/blog/enabling-trunk-based-development-deployment-pipelines)
 * [Trunk Based Development](https://trunkbaseddevelopment.com)
 * [How is Google Chrome shipped?](https://medium.com/@aboodman/in-march-2011-i-drafted-an-article-explaining-how-the-team-responsible-for-google-chrome-ships-c479ba623a1b)
-* https://martinfowler.com/articles/feature-toggles.html
+* [What are feature toggles?](https://martinfowler.com/articles/feature-toggles.html)
