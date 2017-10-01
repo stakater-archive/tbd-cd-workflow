@@ -128,7 +128,7 @@ The deployment pipeline enables a trunk-based CD workflow. By modeling your appl
 
 The deployment pipeline is nothing but a concept that models your build and deployment workflow as a path to production. You model the pipeline as a series of stages. Each stage can be configured to run automatically based on the success of the previous stage OR with a manual trigger. Artifacts built in one stage can be consumed in subsequent stages – giving you the confidence that the same artifact that was tested is what is being deployed.
 
-TODO - add picture
+![simplepipeline](img/simplepipeline.jpg)
 
 You can see the list of commits and each commit has triggered a series of stages that lead all the way to Production. With each passing stage, you get higher confidence with that revision of the code. If something fails, the pipeline stops and you have to fix the build OR revert the commit that caused the failure. (Yes, this is inspired from Lean principles). Thus, the deployment pipeline thus affords a high degree of visibility into the build and the deployment process.
 
