@@ -8,8 +8,8 @@ trunk based development (tbd) continuous delivery (cd) workflow
 
 > Continuous Delivery (CD) is a software strategy that enables organizations to deliver new features to users as fast and efficiently as possible. The core idea of CD is to create a repeatable, reliable and incrementally improving process for taking software from concept to customer. The goal of Continuous Delivery is to enable a constant flow of changes into production via an automated software production line. The Continuous Delivery pipeline is what makes it all happen.
 
-Common anti-patterns with branch based workflows?
-===
+# Common anti-patterns with branch based workflows?
+---
 
 Before we talk about TBD, let us look at some of the anti-patterns with branch-based workflows.
 
@@ -42,6 +42,7 @@ For instance, even if you test your code exhaustively in a staging or a QA envir
 In addition, because you rebuild the artifacts for every branch, there is even more risk because even small environment configuration changes can lead to differences in the binaries. For e.g. a package update or compiler version difference is enough to make the binary different from what was built previously.
 
 # What is TBD?
+---
 
 In trunk-based development (TBD), developers always check into one branch, typically the master branch also called the “mainline” or “trunk”. You almost never create long-lived branches and as developer, check in as frequently as possible to the master — at least few times a day.
 
@@ -111,6 +112,7 @@ Hide features that aren’t finished yet from users. Feature toggles are an effe
 With a comprehensive automated test suite designed to give fast feedback, you have high confidence about the changes you are making. If you are always checking in small incremental changes, test failures are easy to fix.
 
 # What is Deployment Pipeline?
+---
 
 The deployment pipeline enables a trunk-based CD workflow. By modeling your application delivery as a pipeline of stages from the trunk all the way to Production, you get the visibility and reliability required to deploy continuously to Production.
 
@@ -129,6 +131,7 @@ This eliminates the need to have a branch per environment and enables a highly v
 Also, because there is no friction that comes with intermediate branches, this workflow promotes the practice of pushing small incremental changes that the customer benefits from continuously – which is the whole point.
 
 # Continuous Code Review
+---
 
 ## Pull Requests in Trunk Based Development
 
@@ -139,6 +142,7 @@ Now, with part of the new feature committed and the pull request created, anothe
 The code is not always reviewed immediately after the commit but in most cases it reaches the master branch much quicker than in Git Flow.
 
 # Feature Toggles
+---
 
 Feature toggles are a powerful technique, allowing teams to modify system behavior without changing code. They fall into various usage categories, and it's important to take that categorization into account when implementing and managing toggles. Toggles introduce complexity. We can keep that complexity in check by using smart toggle implementation practices and appropriate tools to manage our toggle configuration, but we should also aim to constrain the number of toggles in our system.
 
@@ -181,12 +185,14 @@ Release toggles are a useful technique and lots of teams use them. However they 
 Your first choice should be to break the feature down so you can safely introduce parts of the feature into the product. The advantages of doing this are the same ones as any strategy based on small, frequent releases. You reduce the risk of things going wrong and you get valuable feedback on how users actually use the feature that will improve the enhancements you make later.
 
 # Rules
+---
 
 1. Raise a PR as soon as you have first commit in your feature branch - 
 
 2. 
 
 # Conclusion
+---
 
 > TBD is awesome, but it is not a silver bullet. Trying to implement it before having a reliable test suite and continuous integration in place (at least) will lead to serious quality issues in production.
 
