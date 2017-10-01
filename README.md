@@ -162,7 +162,7 @@ It's very important to retire **release toggles** once the pending features have
 
 ## Categories of toggles
 
-Feature toggles can be categorized across two major dimensions: how long the feature toggle will live and how dynamic the toggling decision must be. There are other factors to consider - who will manage the feature toggle, for example - but I consider longevity and dynamism to be two big factors which can help guide how to manage toggles.
+Feature toggles can be categorized across two major dimensions: **how long the feature toggle will live** and **how dynamic the toggling decision must be**. There are other factors to consider - **who will manage the feature toggle**, for example - but I consider longevity and dynamism to be two big factors which can help guide how to manage toggles.
 
 ### 1. Release Toggles
 
