@@ -68,7 +68,16 @@ When a feature gets close to completion we introduce an option so that advanced 
 
 ## Gigantic amounts of automated testing
 
-In order to release every day, we need to have confidence that our codebase is always in a good state. This requires automated tests. Lots of automated tests. 
+In order to release every day, we need to have confidence that our codebase is always in a good state. This requires automated tests. Lots of automated tests. Our general rule should be that every change has to come with tests.
+
+We must run new changes to our code against our test suite on every configuration, and we MUST enforce a “green tree” policy. If a change breaks a test, it should be immediately reverted. The developer must fix the change and re-land it. We shouldn't leave broken changes in the tree because:
+
+* It makes it easy to accidentally land more broken changes because nobody notices the tree go from red to even redder
+* It slows down development because everyone has to work around whatever is broken
+* It encourages developers to make sloppy quick fixes to the get the tests passing
+* It prevents us from releasing!
+
+To help developers avoid breaking the tree, we can have [try bots](http://www.chromium.org/developers/testing/try-server-usage), which are a way to test a change under all tests and configurations before landing it. The results can be emailed to the developer. We can also have a [commit queue](http://www.chromium.org/developers/testing/commit-queue), which is a way to try a change and have it landed automatically if the try succeeds. I like to use this after a long night of hacking. I press the button, go to bed, and wake up — hopefully to my change having landed.
 
 ## Isn’t it too risky to develop on the mainline?
 
