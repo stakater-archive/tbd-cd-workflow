@@ -1,0 +1,17 @@
+# Created by .ignore support plugin (hsz.mobi)
+build
+token.csv
+tokens.csv
+envs.sh
+!resources/*/envs.sh
+*.pem
+*.key
+.DS_Store
+.git
+.terraform
+.vagrant
+coreos-cluster
+provider.tf
+ami.tf
+tmp/
+.idea
