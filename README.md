@@ -223,6 +223,10 @@ Your first choice should be to break the feature down so you can safely introduc
 
 **A 1:** The answer is that refactorings must be broken up into changes which incrementally move toward the desired end-state without breaking anything in the meantime. It’s a skill, but it can be done!
 
+**Q 2:** I’ve seen many teams losing time every day trying to fix flaky integration tests?
+
+**A 2:** I don’t think there are well-known solutions. This is something the entire industry is struggling with.
+We should double-down on unit tests, and not write as many integration tests. We should try to design our code such that bigger and bigger pieces could be tested using the unit testing style.
 
 # References
 
