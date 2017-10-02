@@ -216,6 +216,8 @@ Your first choice should be to break the feature down so you can safely introduc
 # Conclusion
 ---
 
+> TBD is like "github flow" but we merge into master/trunk before deploying to production
+
 > TBD is awesome, but it is not a silver bullet. Trying to implement it before having a reliable test suite and continuous integration in place (at least) will lead to serious quality issues in production.
 
 > TBD also implies deploying code from the mainline to production – which means that your mainline must always be in a state that it can be released to production.
@@ -243,6 +245,8 @@ Your first choice should be to break the feature down so you can safely introduc
 We should double-down on unit tests, and not write as many integration tests. We should try to design our code such that bigger and bigger pieces could be tested using the unit testing style.
 
 # References
+
+Most of the content has been copied from the following references but has been presented in more structured way; if you have time then they are must read:
 
 * [A git workflow for continuous delivery](https://blogs.technet.microsoft.com/devops/2016/06/21/a-git-workflow-for-continuous-delivery/)
 * [Enabling trunk based development deployment pipelines](https://www.thoughtworks.com/insights/blog/enabling-trunk-based-development-deployment-pipelines)
