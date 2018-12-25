@@ -1,3 +1,5 @@
+**NOTE** It has been moved to [developer-handbook](https://github.com/stakater/developer-handbook)
+
 # tbd-cd-workflow
 
 trunk-based development (TBD) continuous delivery (CD) workflow
